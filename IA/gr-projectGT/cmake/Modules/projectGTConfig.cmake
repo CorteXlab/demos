@@ -1,0 +1,30 @@
+INCLUDE(FindPkgConfig)
+PKG_CHECK_MODULES(PC_PROJECTGT projectGT)
+
+FIND_PATH(
+    PROJECTGT_INCLUDE_DIRS
+    NAMES projectGT/api.h
+    HINTS $ENV{PROJECTGT_DIR}/include
+        ${PC_PROJECTGT_INCLUDEDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/include
+          /usr/local/include
+          /usr/include
+)
+
+FIND_LIBRARY(
+    PROJECTGT_LIBRARIES
+    NAMES gnuradio-projectGT
+    HINTS $ENV{PROJECTGT_DIR}/lib
+        ${PC_PROJECTGT_LIBDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/lib
+          ${CMAKE_INSTALL_PREFIX}/lib64
+          /usr/local/lib
+          /usr/local/lib64
+          /usr/lib
+          /usr/lib64
+)
+
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(PROJECTGT DEFAULT_MSG PROJECTGT_LIBRARIES PROJECTGT_INCLUDE_DIRS)
+MARK_AS_ADVANCED(PROJECTGT_LIBRARIES PROJECTGT_INCLUDE_DIRS)
+

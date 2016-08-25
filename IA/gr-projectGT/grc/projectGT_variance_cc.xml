@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<block>
+  <name>Variance</name>
+  <key>projectGT_variance_cc</key>
+  <category>projectGT</category>
+  <import>import projectGT</import>
+  <make>projectGT.variance_cc($n_items)</make>
+  <param>
+    <name>Nb of items</name>
+    <key>n_items</key>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>

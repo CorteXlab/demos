@@ -1,0 +1,53 @@
+<block>
+  <name>IA Vectors</name>
+  <key>projectGT_IA_vectors_vcvc</key>
+  <category>projectGT</category>
+  <import>import projectGT</import>
+  <make>projectGT.IA_vectors_vcvc($chnl_dim, $noise, $free_dim, $stream_dim, $freq_IA, $len_tag_key)</make>
+  <callback>set_noise($noise)</callback>
+  <param>
+    <name>channel dimensions</name>
+    <key>chnl_dim</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>interference free dim</name>
+    <key>free_dim</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>stream dimensions</name>
+    <key>stream_dim</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Noise power</name>
+    <key>noise</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>IA frequencies</name>
+    <key>freq_IA</key>
+    <value>()</value>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Length Tag Key</name>
+    <key>len_tag_key</key>
+    <type>string</type>
+  </param>
+  <sink>
+    <name>chnl_intrf</name>
+    <type>complex</type>
+    <vlen>$(chnl_dim)</vlen>
+  </sink>
+  <sink>
+    <name>chnl_proper</name>
+    <type>complex</type>
+    <vlen>$(chnl_dim)</vlen>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

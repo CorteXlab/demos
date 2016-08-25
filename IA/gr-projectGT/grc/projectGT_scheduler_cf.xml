@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<block>
+  <name>Scheduler</name>
+  <key>projectGT_scheduler_cf</key>
+  <category>projectGT</category>
+  <import>import projectGT</import>
+  <make>projectGT.scheduler_cf($vec_dim, $stream_dim, $n_users, $freq_dim, $n_disp)</make>
+	<param>
+		<name>Vec Dimension</name>
+		<key>vec_dim</key>
+		<value>3</value>
+		<type>int</type>
+	</param>
+	<param>
+		<name>Num Streams</name>
+		<key>stream_dim</key>
+		<value>2</value>
+		<type>int</type>
+	</param>
+	<param>
+		<name>Num users</name>
+		<key>n_users</key>
+		<value>2</value>
+		<type>int</type>
+	</param>
+	<param>
+		<name>Frequency Dimension</name>
+		<key>freq_dim</key>
+		<value>4</value>
+		<type>int</type>
+	</param>
+	<param>
+		<name>Out vector length</name>
+		<key>n_disp</key>
+		<value>64</value>
+		<type>int</type>
+	</param>
+	<sink>
+		<name>in</name>
+		<type>complex</type>
+		<nports>$n_users</nports>
+	</sink>
+	<source>
+		<name>out</name>
+		<type>float</type>
+		<vlen>$n_disp</vlen>
+	</source>
+</block>

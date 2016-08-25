@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<block>
+  <name>MAC regenerate</name>
+  <key>projectGT_detect_gen_mac_b</key>
+  <category>projectGT</category>
+  <import>import projectGT</import>
+  <make>projectGT.detect_gen_mac_b($lengthtagname)</make>
+  <param>
+    <name>Length Tag Key</name>
+    <key>lengthtagname</key>
+    <type>string</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+  <source>
+    <name>pdus</name>
+    <type>message</type>
+  </source>
+</block>

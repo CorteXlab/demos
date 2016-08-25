@@ -1,0 +1,6 @@
+2 training symbols
+(sync_word1,sync_word2)
+40 training symbols
+(sync_word1,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2)
+20 training symbols
+(sync_word1,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2,sync_word2)

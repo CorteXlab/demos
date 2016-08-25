@@ -1,0 +1,50 @@
+# Example scenario description file
+#
+#   All lines starting with "#" and empy lines are ignored
+
+
+# Scenario textual description
+#   simple string (a one liner)
+desc Test of IA demo
+
+# Experiment maximum duration
+#   Time after which the experiment is forced to stop
+#   integer (minutes)
+durat 3
+
+# Node list
+#
+#   format:
+#
+#   (machine):
+#   entry (entry point script relative to the task root)
+#   exit (exit point script relative to the task root. Use "none" for none)
+
+node25:
+   entry BS_interf.py
+   params --cfreq 500M --tx-gain 23
+
+node6:
+   entry BS_main.py
+   params --cfreq 500M --tx-gain 11
+   passive true
+
+node9:
+   entry UE.py
+   params --cfreq 500M --seed1 3000 --udp-address dnode24 --port 65450 --porti 6663 --portd 6669
+   passive true
+
+node13:
+   entry UE.py
+   params --cfreq 500M --seed1 3170 --udp-address dnode24 --port 65400 --porti 6665 --portd 6666 --n1 0.15 --n2 1.0 --n3 0.08 --n4 0.1 
+   passive true
+
+node14:
+   entry UE.py
+   params --cfreq 500M --seed1 2511 --udp-address dnode24 --port 65500 --porti 6667 --portd 6668 --n1 1.0 --n2 0.1 --n3 0.0 --n4 0.05 
+   passive true
+
+node24:
+   entry scheduler.py
+   params --address1 dnode24 --address2 dnode24 --address3 dnode24 --out-vec-size 128
+   passive true

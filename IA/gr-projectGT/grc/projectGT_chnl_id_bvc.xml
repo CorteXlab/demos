@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<block>
+  <name>ID and Channel</name>
+  <key>projectGT_chnl_id_bvc</key>
+  <category>projectGT</category>
+  <import>import projectGT</import>
+  <make>projectGT.chnl_id_bvc($dim, $lengthtagname)</make>
+  <param>
+    <name>Dimension</name>
+    <key>dim</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Length tag name</name>
+    <key>lengthtagname</key>
+    <value>"packet_len"</value>
+    <type>string</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+  <source>
+    <name>chnl_1</name>
+    <type>complex</type>
+    <vlen>$(dim)</vlen>
+  </source>
+  <source>
+    <name>chnl_2</name>
+    <type>complex</type>
+    <vlen>$(dim)</vlen>
+  </source>
+</block>

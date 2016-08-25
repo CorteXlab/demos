@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<block>
+	<name>Get Channel Coeff</name>
+	<key>projectGT_get_chnl_vcvc</key>
+	<category>projectGT</category>
+	<import>import projectGT</import>
+	<make>projectGT.get_chnl_vcvc($chnl_dim, $len_tag_key)</make>
+	<param>
+		<name>Channel dimensions</name>
+		<key>chnl_dim</key>
+		<value>64</value>
+		<type>int</type>
+	</param>
+	<param>
+		<name>Length tag key</name>
+		<key>len_tag_key</key>
+		<value>"packet_len"</value>
+		<type>string</type>
+	</param>
+	<sink>
+		<name>in</name>
+		<type>complex</type>
+		<vlen>$(chnl_dim)</vlen>
+	</sink>
+	<source>
+		<name>chnl_coef</name>
+		<type>complex</type>
+		<vlen>$(chnl_dim)</vlen>
+	</source>
+</block>
