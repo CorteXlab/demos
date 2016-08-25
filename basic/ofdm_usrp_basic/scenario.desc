@@ -1,0 +1,29 @@
+# Example scenario description file
+#
+#   All lines starting with "#" and empy lines are ignored
+
+
+# Scenario textual description
+#   simple string (a one liner)
+desc OFDM tx-rx example scenario for CorteXlab
+
+# Experiment maximum duration
+#   Time after which the experiment is forced to stop
+#   integer (minutes)
+durat 2
+
+# Node list
+#
+#   format:
+#
+#   (machine):
+#   entry (entry point script relative to the task root)
+#   exit (exit point script relative to the task root. Use "none" for none)
+
+node8:
+   entry rx_ofdm.py
+   params dummy-but-needed
+
+node6:
+   entry tx_ofdm.py
+   params dummy-but-needed

@@ -1,0 +1,28 @@
+# Example scenario description file
+#
+#   All lines starting with "#" and empy lines are ignored
+
+
+# Scenario textual description
+#   simple string (a one liner)
+desc base scenario for CorteXlab
+
+# Experiment maximum duration
+#   Time after which the experiment is forced to stop
+#   integer (minutes)
+durat 2
+
+# Node list
+#
+#   format:
+#
+#   (machine):
+#   entry (entry point script relative to the task root)
+#   exit (exit point script relative to the task root. Use "none" for none)
+
+node29:
+   entry rx_ofdm.py
+
+node31:
+   entry tx_ofdm.py
+
