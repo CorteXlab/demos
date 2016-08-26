@@ -23,9 +23,9 @@ In order to compile and use this scenario do the following:
 
 Use the following commands fro your shell prompt at the airlock server:
 
-$ cd gr-projectGT
-$ mkdir build
-$ cd build
-$ cmake -DCMAKE_INSTALL_PREFIX=/home/cxlbuser/tasks/task
+$ cd gr-projectGT  
+$ mkdir build   
+$ cd build  
+$ cmake -DCMAKE_INSTALL_PREFIX=/home/cxlbuser/tasks/task  
 $ make
 
